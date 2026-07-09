@@ -350,6 +350,7 @@
     line-height: 1.85;
     color: var(--concrete);
     margin-bottom: 1.5rem;
+    text-align: justify; 
   }
 
   .about-text p strong {

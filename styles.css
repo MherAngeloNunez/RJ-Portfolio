@@ -203,7 +203,18 @@
   .hero-img-placeholder:hover { transform: scale(1.02); }
 
   /* Hero image placeholder with blueprint look */
- .hero-img-bg img {
+ .hero-img-bg {
+    width: 100%;
+    height: 100vh; /* ADD THIS */
+    background: #d6d0c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -212,7 +223,7 @@
     left: 0;
 }
 
-  .hero-img-bg::before {
+.hero-img-bg::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -220,7 +231,8 @@
       linear-gradient(rgba(45,58,74,0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(45,58,74,0.1) 1px, transparent 1px);
     background-size: 30px 30px;
-  }
+    z-index: 1; /* ADD THIS so the grid stays on top of the image */
+}
 
   .placeholder-label {
     font-family: 'DM Mono', monospace;

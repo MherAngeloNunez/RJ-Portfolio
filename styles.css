@@ -421,13 +421,11 @@
     border: 1px solid var(--light-gray);
     overflow: hidden;
   }
- .project-feature-img {
+.project-feature-img {
     background: #d0cab8;
     overflow: hidden;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 600px; /* brute force match the text box height */
 }
 
 .project-feature-img img {

@@ -552,7 +552,7 @@
   }
 
   .project-card-img {
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/11.31;
     background: #cec7ba;
     overflow: hidden;
     position: relative;

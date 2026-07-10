@@ -425,7 +425,7 @@
 }
 
 .project-feature-img {
-    aspect-ratio: 16/9; /* wider ratio looks better for portrait layout */
+    aspect-ratio: 16/10.66; /* wider ratio looks better for portrait layout */
     background: #d0cab8;
     overflow: hidden;
     position: relative;

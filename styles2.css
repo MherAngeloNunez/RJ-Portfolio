@@ -308,11 +308,12 @@
     grid-template-columns: 1fr 1.6fr;
     gap: 6rem;
     align-items: start;
+    overflow: hidden;
 }
 
 .about-left {
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    min-width: 0; /* ADD THIS — prevents grid blowout */
 }
 
 

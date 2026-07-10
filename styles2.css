@@ -302,18 +302,19 @@
     background: var(--charcoal);
     color: var(--off-white);
   }
-
-  .about-grid {
+/*here*/
+.about-grid {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
     gap: 6rem;
     align-items: start;
-  }
-
-  .about-left {
-    position: sticky;
-    top: 2rem; /* ADD THIS — keeps left column pinned while right scrolls */
 }
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+}
+
 
   .about-left .section-label { color: var(--gold); }
   .about-left .section-label::after { background: rgba(200,191,176,0.3); }

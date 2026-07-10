@@ -425,7 +425,7 @@
 }
 
 .project-feature-img {
-    aspect-ratio: 16/9; /* wider ratio looks better for portrait layout */
+    aspect-ratio: 16/10.66; /* wider ratio looks better for portrait layout */
     background: #d0cab8;
     overflow: hidden;
     position: relative;
@@ -814,82 +814,33 @@
     cursor: pointer;
     position: relative;
 }
-.gallery-hint {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 6px 12px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.gallery-trigger:hover .gallery-hint {
-    opacity: 1;
-}
-
-/* Lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.92);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.lightbox.open {
-    display: flex;
-}
-.lightbox-main {
-    max-width: 80vw;
-    max-height: 70vh;
-    object-fit: contain;
-}
-.lightbox-thumbs {
-    display: flex;
-    gap: 10px;
-    margin-top: 16px;
-}
-.lightbox-thumb {
-    width: 70px;
-    height: 50px;
-    object-fit: cover;
-    cursor: pointer;
-    opacity: 0.5;
-    border: 2px solid transparent;
-    transition: opacity 0.3s ease;
-}
-.lightbox-thumb.active {
-    opacity: 1;
-    border: 2px solid var(--gold);
-}
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 28px;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    line-height: 1;
-}
-.lightbox-arrow {
+.gallery-prev, .gallery-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
     color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
     border: none;
-    padding: 0 20px;
+    font-size: 2rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+    line-height: 1;
 }
-.lightbox-arrow.prev { left: 0; }
-.lightbox-arrow.next { right: 0; }
+.gallery-prev { left: 0; }
+.gallery-next { right: 0; }
+.gallery-prev:hover, .gallery-next:hover {
+    background: rgba(0,0,0,0.7);
+}
+.gallery-counter {
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 4px 10px;
+}

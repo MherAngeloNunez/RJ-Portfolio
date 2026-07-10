@@ -310,6 +310,11 @@
     align-items: start;
   }
 
+  .about-left {
+    position: sticky;
+    top: 2rem; /* ADD THIS — keeps left column pinned while right scrolls */
+}
+
   .about-left .section-label { color: var(--gold); }
   .about-left .section-label::after { background: rgba(200,191,176,0.3); }
 
